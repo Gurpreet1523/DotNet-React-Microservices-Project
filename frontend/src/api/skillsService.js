@@ -1,14 +1,14 @@
 import httpClient from './httpClient';
 
-// Routed by Ocelot: /api/skills/** -> Portfolio.Skills.API (:5004)
+// Routed by Ocelot: /skills/** -> Portfolio.Skills.API (:5004)
 const skillsService = {
   getAll: async () => {
-    const { data } = await httpClient.get('/api/skills');
+    const { data } = await httpClient.get('/skills');
     return data;
   },
 
   getByCategory: async (category) => {
-    const { data } = await httpClient.get('/api/skills', { params: { category } });
+    const { data } = await httpClient.get('/skills', { params: { category } });
     return data;
   },
 };

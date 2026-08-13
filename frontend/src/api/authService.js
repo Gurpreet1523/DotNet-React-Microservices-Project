@@ -1,22 +1,22 @@
 import httpClient from './httpClient';
 
-// Routed by Ocelot: /api/auth/** -> Portfolio.Auth.API (:5001)
+// Routed by Ocelot: /auth/** -> Portfolio.Auth.API (:5001)
 const authService = {
   login: async (credentials) => {
-    const { data } = await httpClient.post('/api/auth/login', credentials);
+    const { data } = await httpClient.post('/auth/login', credentials);
     localStorage.setItem('accessToken', data.accessToken);
     localStorage.setItem('refreshToken', data.refreshToken);
     return data;
   },
 
   register: async (payload) => {
-    const { data } = await httpClient.post('/api/auth/register', payload);
+    const { data } = await httpClient.post('/auth/register', payload);
     return data;
   },
 
   refresh: async () => {
     const refreshToken = localStorage.getItem('refreshToken');
-    const { data } = await httpClient.post('/api/auth/refresh', { refreshToken });
+    const { data } = await httpClient.post('/auth/refresh', { refreshToken });
     localStorage.setItem('accessToken', data.accessToken);
     return data;
   },
@@ -27,7 +27,7 @@ const authService = {
   },
 
   me: async () => {
-    const { data } = await httpClient.get('/api/auth/me');
+    const { data } = await httpClient.get('/auth/me');
     return data;
   },
 };
