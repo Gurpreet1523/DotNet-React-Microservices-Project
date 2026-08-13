@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="container">
-        <p className="eyebrow">Backend-leaning full-stack engineer</p>
+        <p className="eyebrow">full-stack Software Developer</p>
 
         {loading && <Loader label="Loading profile" />}
         {error && <ErrorMessage message="Couldn't reach the Profile service." onRetry={refetch} />}

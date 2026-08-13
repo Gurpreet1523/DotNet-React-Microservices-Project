@@ -6,7 +6,7 @@ export default function Footer() {
           Built on a .NET microservices backend — Gateway, Auth, Profile, Projects, Skills,
           Contact.
         </p>
-        <p className="footer-text">&copy; {new Date().getFullYear()}</p>
+        <p className="footer-text">&copy; {new Date().getFullYear()} designed and Developed by Gurpreet Kaur</p>
       </div>
     </footer>
   );
