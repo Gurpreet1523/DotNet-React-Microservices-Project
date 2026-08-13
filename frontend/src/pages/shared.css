@@ -1,0 +1,13 @@
+.contact-intro {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
+
+.not-found {
+  padding: var(--space-6) 0;
+}
+
+.not-found .btn {
+  margin-top: var(--space-4);
+}

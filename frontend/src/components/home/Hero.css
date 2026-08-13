@@ -1,0 +1,32 @@
+.hero {
+  padding: var(--space-7) 0 var(--space-6);
+}
+
+.hero-title {
+  font-size: var(--fs-3xl);
+  margin-top: var(--space-2);
+  max-width: 14ch;
+}
+
+.hero-summary {
+  font-size: var(--fs-lg);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-top: var(--space-3);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.hero-topology {
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: var(--fs-2xl);
+  }
+}

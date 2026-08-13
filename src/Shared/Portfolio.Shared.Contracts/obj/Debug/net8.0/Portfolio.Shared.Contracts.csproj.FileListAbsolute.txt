@@ -1,0 +1,12 @@
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\bin\Debug\net8.0\Portfolio.Shared.Contracts.deps.json
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\bin\Debug\net8.0\Portfolio.Shared.Contracts.dll
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\bin\Debug\net8.0\Portfolio.Shared.Contracts.pdb
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\obj\Debug\net8.0\Portfolio.Shared.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\obj\Debug\net8.0\Portfolio.Shared.Contracts.AssemblyInfoInputs.cache
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\obj\Debug\net8.0\Portfolio.Shared.Contracts.AssemblyInfo.cs
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\obj\Debug\net8.0\Portfolio.Shared.Contracts.csproj.CoreCompileInputs.cache
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\obj\Debug\net8.0\Portfolio.Shared.Contracts.dll
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\obj\Debug\net8.0\refint\Portfolio.Shared.Contracts.dll
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\obj\Debug\net8.0\Portfolio.Shared.Contracts.pdb
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\obj\Debug\net8.0\ref\Portfolio.Shared.Contracts.dll
+D:\portfolio-solution\src\Shared\Portfolio.Shared.Contracts\obj\Debug\net8.0\Portfolio.Shared.Contracts.csproj.AssemblyReference.cache

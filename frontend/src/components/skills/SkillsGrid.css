@@ -1,0 +1,43 @@
+.skills-groups {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.skills-group-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-3);
+}
+
+.skills-group-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-3);
+}
+
+.skill-badge {
+  padding: var(--space-2) 0;
+}
+
+.skill-badge-name {
+  font-size: var(--fs-sm);
+}
+
+.skill-badge-bar {
+  margin-top: 6px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.skill-badge-fill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 2px;
+}

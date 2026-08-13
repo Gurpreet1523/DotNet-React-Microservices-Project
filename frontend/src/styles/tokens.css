@@ -1,0 +1,38 @@
+:root {
+  /* Color — ink-blue base, single amber accent, green/red for service status */
+  --color-bg: #0b1120;
+  --color-bg-raised: #111a2e;
+  --color-border: #2a3752;
+  --color-text: #edeff5;
+  --color-text-muted: #9aa5bd;
+  --color-accent: #f5a623;
+  --color-accent-dim: #a97423;
+  --color-online: #3ecf8e;
+  --color-offline: #e2574c;
+
+  /* Type */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.5rem;
+  --fs-3xl: 3.5rem;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+  --space-7: 96px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --content-width: 1080px;
+}

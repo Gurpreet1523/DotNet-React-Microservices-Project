@@ -1,0 +1,108 @@
+﻿trigger:
+  branches:
+    include: [main, develop]
+
+variables:
+  buildConfiguration: 'Release'
+  azureSubscription: 'AzureServiceConnection'
+  acrName: 'gurpreetportfolioacr'
+  appServiceName: 'gurpreet-portfolio-api'
+  staticWebAppName: 'gurpreet-portfolio-web'
+
+stages:
+- stage: Test
+  displayName: '🧪 Run Unit Tests'
+  jobs:
+  - job: DotNetTests
+    pool: { vmImage: 'ubuntu-latest' }
+    steps:
+    - task: UseDotNet@2
+      inputs: { version: '8.x' }
+    - script: |
+        dotnet restore
+        dotnet build --configuration $(buildConfiguration)
+        dotnet test --configuration $(buildConfiguration) \
+          --collect:"XPlat Code Coverage" \
+          --results-directory $(Agent.TempDirectory)/TestResults
+      displayName: 'Build & Test .NET'
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'VSTest'
+        testResultsFiles: '**/*.trx'
+    - task: PublishCodeCoverageResults@1
+      inputs:
+        codeCoverageTool: 'Cobertura'
+        summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml'
+
+- stage: Build
+  displayName: '🏗️ Build & Push Docker Images'
+  dependsOn: Test
+  jobs:
+  - job: BuildImages
+    pool: { vmImage: 'ubuntu-latest' }
+    steps:
+    - task: Docker@2
+      displayName: 'Build & Push Auth Service'
+      inputs:
+        containerRegistry: '$(acrName)'
+        repository: 'portfolio-auth'
+        command: 'buildAndPush'
+        dockerfile: 'src/Services/Portfolio.Auth.API/Dockerfile'
+        tags: '$(Build.BuildId)'
+    # Repeat for each service...
+    - task: NodeTool@0
+      inputs: { versionSpec: '20.x' }
+    - script: |
+        cd frontend
+        npm ci
+        npm run build
+      displayName: 'Build React App'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathtoPublish: 'frontend/build'
+        artifactName: 'react-build'
+
+- stage: Deploy_Staging
+  displayName: '🚀 Deploy to Staging'
+  dependsOn: Build
+  environment: 'staging'
+  jobs:
+  - deployment: DeployAPIs
+    pool: { vmImage: 'ubuntu-latest' }
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebAppContainer@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: '$(appServiceName)-staging'
+              imageName: '$(acrName).azurecr.io/portfolio-auth:$(Build.BuildId)'
+  - deployment: DeployFrontend
+    pool: { vmImage: 'ubuntu-latest' }
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureStaticWebApp@0
+            inputs:
+              azure_static_web_apps_api_token: '$(AZURE_STATIC_WEB_APPS_API_TOKEN)'
+              app_location: 'frontend/build'
+              skip_app_build: true
+
+- stage: Deploy_Production
+  displayName: '✅ Deploy to Production'
+  dependsOn: Deploy_Staging
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+  jobs:
+  - deployment: ProdDeploy
+    environment: 'production'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebAppContainer@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: '$(appServiceName)'
+              imageName: '$(acrName).azurecr.io/portfolio-auth:$(Build.BuildId)'

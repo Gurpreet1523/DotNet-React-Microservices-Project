@@ -1,0 +1,40 @@
+version: '3.9'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "YourStr0ng!Pass"
+      ACCEPT_EULA: "Y"
+    ports: ["1433:1433"]
+
+  gateway:
+    build: ./src/Gateway/Portfolio.Gateway
+    ports: ["5000:5000"]
+    depends_on: [auth-service, profile-service, projects-service]
+
+  auth-service:
+    build: ./src/Services/Portfolio.Auth.API
+    environment:
+      - ConnectionStrings__AuthDb=Server=sqlserver;...
+    ports: ["5001:5001"]
+
+  profile-service:
+    build: ./src/Services/Portfolio.Profile.API
+    ports: ["5002:5002"]
+
+  projects-service:
+    build: ./src/Services/Portfolio.Projects.API
+    ports: ["5003:5003"]
+
+  skills-service:
+    build: ./src/Services/Portfolio.Skills.API
+    ports: ["5004:5004"]
+
+  contact-service:
+    build: ./src/Services/Portfolio.Contact.API
+    ports: ["5005:5005"]
+
+  frontend:
+    build: ./frontend
+    ports: ["3000:80"]
+    depends_on: [gateway]

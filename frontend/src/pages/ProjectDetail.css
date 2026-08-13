@@ -1,0 +1,21 @@
+.project-detail {
+  margin-top: var(--space-4);
+  max-width: 720px;
+}
+
+.project-detail h1 {
+  font-size: var(--fs-2xl);
+  margin-top: var(--space-2);
+}
+
+.project-detail-desc {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.project-detail-links {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
