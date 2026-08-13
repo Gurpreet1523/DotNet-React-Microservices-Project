@@ -52,6 +52,20 @@ namespace Portfolio.Auth.API.Controller
             return Ok(result);
         }
 
+        [Authorize]
+        [HttpGet("me")]
+        public IActionResult Me()
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var email = User.FindFirst(ClaimTypes.Email)?.Value;
+
+            return Ok(new
+            {
+                userId,
+                email
+            });
+        }
+
         [HttpPost("refresh")]
         public async Task<IActionResult> Refresh([FromBody] RefreshRequest request)
         {
