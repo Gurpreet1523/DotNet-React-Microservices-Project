@@ -24,7 +24,7 @@ export default function Hero() {
                 View projects
               </a>
               <a className="btn" href={profile.resumeUrl || '#'} download>
-                Download résumé
+                Download resume
               </a>
             </div>
           </>

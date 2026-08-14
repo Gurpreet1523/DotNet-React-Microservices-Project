@@ -47,11 +47,11 @@ export default function ProjectDetail() {
                   Source
                 </a>
               )}
-              {project.liveUrl && (
+              {/* {project.liveUrl && (
                 <a className="btn btn-primary" href={project.liveUrl} target="_blank" rel="noreferrer">
                   Live demo
                 </a>
-              )}
+              )} */}
             </div>
           </div>
         )}

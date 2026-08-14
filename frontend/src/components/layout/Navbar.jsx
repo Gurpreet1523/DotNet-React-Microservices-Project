@@ -15,7 +15,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container navbar-inner">
         <NavLink to="/" className="navbar-brand">
-          <span className="navbar-brand-mark">{'{ }'}</span> Gurpreet Kaur
+          <span className="navbar-brand-mark">{'GK'}</span> Gurpreet Kaur
         </NavLink>
         <nav className="navbar-links">
           {LINKS.map((link) => (
