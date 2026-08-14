@@ -59,6 +59,18 @@
         }
       ],
       "SwaggerKey": "contact"
+    },
+    {
+      "UpstreamPathTemplate": "/experience/{everything}",
+      "DownstreamPathTemplate": "/api/Experience/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5006
+        }
+      ],
+      "SwaggerKey": "experience"
     }
   ],
 

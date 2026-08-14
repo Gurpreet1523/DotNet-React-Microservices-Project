@@ -1,6 +1,7 @@
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\bin\Debug\net8.0\appsettings.Development.json
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\bin\Debug\net8.0\appsettings.json
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\bin\Debug\net8.0\ocelot.json
+D:\portfolio-solution\src\Gateway\Portfolio.Gateway\bin\Debug\net8.0\swaggerEndpoints.json
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\bin\Debug\net8.0\Portfolio.Gateway.exe
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\bin\Debug\net8.0\Portfolio.Gateway.deps.json
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\bin\Debug\net8.0\Portfolio.Gateway.runtimeconfig.json
@@ -65,6 +66,7 @@ D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\Portfolio.G
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\Portfolio.Gateway.csproj.CoreCompileInputs.cache
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\Portfolio.Gateway.MvcApplicationPartsAssemblyInfo.cs
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\Portfolio.Gateway.MvcApplicationPartsAssemblyInfo.cache
+D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\Portfolio.Gateway.sourcelink.json
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\staticwebassets.build.json
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\staticwebassets.development.json
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\staticwebassets\msbuild.Portfolio.Gateway.Microsoft.AspNetCore.StaticWebAssets.props
@@ -79,4 +81,3 @@ D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\refint\Port
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\Portfolio.Gateway.pdb
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\Portfolio.Gateway.genruntimeconfig.cache
 D:\portfolio-solution\src\Gateway\Portfolio.Gateway\obj\Debug\net8.0\ref\Portfolio.Gateway.dll
-D:\portfolio-solution\src\Gateway\Portfolio.Gateway\bin\Debug\net8.0\swaggerEndpoints.json

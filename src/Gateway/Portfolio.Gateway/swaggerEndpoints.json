@@ -49,6 +49,16 @@
           "Url": "https://localhost:5005/swagger/v1/swagger.json"
         }
       ]
+    },
+    {
+      "Key": "experience",
+      "Config": [
+        {
+          "Name": "Experience API",
+          "Version": "v1",
+          "Url": "https://localhost:5006/swagger/v1/swagger.json"
+        }
+      ]
     }
   ]
 }

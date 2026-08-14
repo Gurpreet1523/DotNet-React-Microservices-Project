@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Portfolio.Shared.Contracts.Responses
 {
-    public class ApiResponse
+    public class ApiResponse<T>
     {
         public bool Success { get; set; }
 
