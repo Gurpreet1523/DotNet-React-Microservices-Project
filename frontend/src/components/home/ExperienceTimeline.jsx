@@ -1,10 +1,10 @@
 import { useFetch } from '../../hooks/useFetch';
-import profileService from '../../api/profileService';
+import experienceService from '../../api/experienceService';
 import Loader from '../common/Loader';
 import ErrorMessage from '../common/ErrorMessage';
 
 export default function ExperienceTimeline() {
-  const { data: items, loading, error, refetch } = useFetch(profileService.getExperience, []);
+  const { data: items, loading, error, refetch } = useFetch(experienceService.getExperience, []);
 
   return (
     <section className="section">
@@ -22,7 +22,7 @@ export default function ExperienceTimeline() {
                 <div className="timeline-marker" />
                 <div className="timeline-content">
                   <div className="timeline-heading">
-                    <h3>{item.role}</h3>
+                    <h3>{item.jobTitle}</h3>
                     <span className="timeline-range">
                       {formatDate(item.startDate)} — {item.endDate ? formatDate(item.endDate) : 'Present'}
                     </span>

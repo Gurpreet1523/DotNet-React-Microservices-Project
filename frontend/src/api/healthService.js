@@ -9,6 +9,7 @@ export const SERVICE_NODES = [
   { key: 'projects', label: 'Projects', port: 5003, path: '/api/projects/health' },
   { key: 'skills', label: 'Skills', port: 5004, path: '/api/skills/health' },
   { key: 'contact', label: 'Contact', port: 5005, path: '/api/contact/health' },
+  { key: 'experience', label: 'Experience', port: 5006, path: '/api/experience/health' },
 ];
 
 const healthService = {

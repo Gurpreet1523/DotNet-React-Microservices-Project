@@ -1,6 +1,6 @@
 import httpClient from './httpClient';
 
-// Routed by Ocelot: /api/profile/** -> Portfolio.Profile.API (:5002)
+// Routed by Ocelot: /profile/** -> Portfolio.Profile.API (:5002)
 const profileService = {
   getProfile: async () => {
     const { data } = await httpClient.get('/profile');

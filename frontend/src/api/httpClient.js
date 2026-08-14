@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Every request goes through the Ocelot Gateway (Portfolio.Gateway, :5000).
-// Ocelot then re-routes internally to Auth / Profile / Projects / Skills / Contact.
+// Ocelot then re-routes internally to Auth / Profile / Projects / Skills / Contact / Experience.
 // In dev, vite.config.js proxies "/api" to the gateway, so baseURL can be empty.
 const baseURL = import.meta.env.VITE_API_BASE_URL || '';
 
